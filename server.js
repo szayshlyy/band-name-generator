@@ -21,15 +21,8 @@ var adjective = new Adjective();
 var verb = new Verb();
 var noun = new Noun();
 
-function postWord (word, wordObject) {
-  if (wordObject.hasOwnProperty(word)) {
-    return {msg: 'We already have your awesome word, ' + word + ', in our list.'};
-  }
+var postMessage = require('./lib/postMessage.js');
 
-  wordObject[word] = true;
-  console.dir(wordObject);
-  return {msg: 'Thanks for submitting ' + word + '!'};
-};
 
 app.get('/adjective', function(req, res) {
   res.json(getRandomWord(adjective));
@@ -44,7 +37,7 @@ app.get('/noun', function(req, res) {
 });
 
 app.post('/adjective', function(req, res) {
-  var word = postWord(req.body.word, adjective);
+  var word = postMessage(req.body.word, adjective);
   res.json(word);
 });
 
@@ -55,7 +48,3 @@ app.get('/', function(req, res) {
 app.listen(port, function() {
   console.log('server starting. available at http://localhost:' + port);
 });
-
-// app.get('/', function(req, res) {
-//   res.send('hello, universe');
-// });
