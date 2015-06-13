@@ -41,6 +41,16 @@ app.post('/adjective', function(req, res) {
   res.json(word);
 });
 
+app.post('/verb', function(req, res) {
+  var word = postMessage(req.body.word, verb);
+  res.json(word);
+});
+
+app.post('/noun', function(req, res) {
+  var word = postMessage(req.body.word, noun);
+  res.json(word);
+});
+
 app.get('/', function(req, res) {
   res.sendFile('index.html');
 });
