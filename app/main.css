@@ -1,0 +1,15 @@
+body {
+  box-sizing: border-box;
+  padding-top: 3em;
+  font-family: 'Josefin Slab', serif;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+h1 {
+
+}

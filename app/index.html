@@ -1,12 +1,16 @@
 <html>
+  <head>
+    <title>Band-Name Generator</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab|Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+  </head>
   <body>
-    <h2>
-      Band Name Ideas
-    </h2>
+    <h1 class="center">Band-Name Generator</h1>
+    <p class="center"><button id="name">Click here for band-Name!</button>
+    </p>
 
-    <button id="name">Click here for band name!</button>
 
-    <p>
+    <p class="center">
       You should call you band this:
       <span id="adjective"></span>
       <span id="verb"></span>
@@ -14,28 +18,31 @@
     </p>
 
     <br>
-    <h3>Add your own adjective!</h3>
-    <form id="submitWords">
-      <label>Adjective: </label><input type="text" name="adjective">
+    <h3 class="center">Add your own word!</h3>
+    <form id="submitAdj" class="center">
+      <label>Adjective: </label>
+      <input type="text" name="adjective">
       <input type="submit" value="Add"/>
     </form>
-    <p id='adjectiveRes'></p>
+    <p id="adjectiveRes" class="center"></p>
 
-    <br>
-    <h3>Add your own verb!</h3>
-    <form id="submitWords">
-      <label>Verb: </label><input type="text" name="verb">
+    <form id="submitVerb" class="center">
+      <label>Verb (present progressive tense): </label>
+      <input type="text" name="verb">
       <input type="submit" value="Add"/>
     </form>
-    <p id='verbRes'></p>
+    <p id="verbRes" class="center"></p>
 
-    <br>
-    <h3>Add your own noun!</h3>
-    <form id="submitWords">
-      <label>Noun: </label><input type="text" name="noun">
+    <form id="submitNoun" class="center">
+      <label>Noun: </label>
+      <input type="text" name="noun">
       <input type="submit" value="Add"/>
     </form>
-    <p id='nounRes'></p>
+    <p id="nounRes" class="center"></p>
+
+    <footer class="center">
+      <p>Thanks for trying out the app! Have a great day.</p>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="script.js"></script>
